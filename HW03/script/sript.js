@@ -8,10 +8,15 @@ console.log('Task 2');
 //Створити пустий массив і заповнити його всіма парними 
 //занченнями від 0 до 8
 let arrayEvenNumbers = [];
-for (let i = 0, j = 0; i <= 8; i++){
-    if (i % 2 === 0 && i!=0){
-        arrayEvenNumbers[j] = i;
-        j++;     
+// for (let i = 0, j = 0; i <= 8; i++){
+//     if (i % 2 === 0 && i!=0){
+//         arrayEvenNumbers[j] = i;
+//         j++;     
+//     }
+// }
+for (let i = 0; i <= 8; i++){
+    if (i % 2 === 0 && i != 0){
+        arrayEvenNumbers.push(i);
     }
 }
 console.log(arrayEvenNumbers);
