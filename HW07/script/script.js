@@ -36,7 +36,7 @@ window.onload = function() {
         }
     }    
     colorElement(colorLi);
-    let siblingElement = document.querySelectorAll('.active');
+    let siblingElement = document.querySelector('.active');
     console.log(siblingElement);
     
     function nextElementSibling(container){    
@@ -52,6 +52,7 @@ window.onload = function() {
         container.previousElementSibling.setAttribute('style', 'background-color:yellow');    
     }
     nextElementSibling(bodyUl);
-    // nextElementSibling(siblingElement);
+    nextElementSibling(siblingElement);
     previousElementSibling(bodyUl);
+    previousElementSibling(siblingElement);
 };
