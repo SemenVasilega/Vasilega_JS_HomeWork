@@ -3,53 +3,45 @@ window.onload = function() {
     let btnUpRC = document.querySelector('.upRC');
     let btnLowLC = document.querySelector('.lowLC');
     let btnLowRC = document.querySelector('.lowRC');
-    console.log(btnUpLC);
-    // let fragment = new DocumentFragment();
-    let divMain = document.querySelector('.windowMessage');
-    let divMessage = document.createElement('div');
-    let divMessageStyle = getComputedStyle(divMessage);
-    divMain.style.position = 'relative';
-    
-    let width = divMain.offsetWidth;
-    let height = divMain.offsetHeight;
-    console.log(width, height);
+    let btnCenter = document.querySelector('.center');
+    console.log(btnUpLC);    
+    let divMain = document.querySelector('.windowMessage');    
+    divMain.style.position = 'relative';    
+    // let width = divMain.offsetWidth;
+    // let height = divMain.offsetHeight;
+    // console.log(width, height);
     divMain.style.width = '1510px';
     divMain.style.height = '500px';
     divMain.style.backgroundColor = 'red';
-    function createBlokFunc(left, top) {        
-        // let divMessage = document.createElement('div');
-        // let divMessageStyle = getComputedStyle(divMessage);
+    function createBlokFunc(firstPosition, secondPosition) {        
+        let divMessage = document.createElement('div');
+        let divMessageStyle = getComputedStyle(divMessage);
         console.log(divMessageStyle);
         divMessage.innerHTML = '';
-        divMessage.style.position = 'absolute';
-        divMessage.style.position.left = left;
-        divMessage.style.position.top = top;
-        // divMessage.style.textAlign = 'center';        
+        divMessage.style.position = 'absolute';        
+        divMessage.style.left = firstPosition;
+        divMessage.style.top = secondPosition;        
         divMessage.style.width = '20%';
         divMessage.style.height = '20%';
-        divMessage.style.backgroundColor = 'green';
-        divMessage.style.position = position;
-        // divMessage.style.padding = paddingLeft;
-        // divMessage.style.paddingTop = paddingTop;
-        // fragment.appendChild(divMessage);
+        divMessage.style.backgroundColor = 'green';        
         divMain.appendChild(divMessage);
         console.log(divMessage);
     }
     btnUpLC.onclick = function() {
-        createBlokFunc('100 px', '150 px');
+        createBlokFunc('0', '0');
         // divMain.appendChild(fragment);
-        console.log('Hi');
+        // console.log('Hi');
     }
     btnUpRC.onclick = function(){
-        createBlokFunc('80%','0%');
-        // divMain.appendChild(fragment);
+        createBlokFunc('80%', '0');
     }
     btnLowLC.onclick = function(){
         createBlokFunc('0','80%');
-        // divMain.appendChild(fragment);
     }    
     btnLowRC.onclick = function(){
         createBlokFunc('80%','80%');
-        // divMain.appendChild(fragment);
+    }
+    btnCenter.onclick = function(){
+        createBlokFunc('40%','40%');
     }
 };
