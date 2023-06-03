@@ -25,3 +25,13 @@
     flex-direction: column;
     margin-bottom: 20px;
 }
+.images{
+    text-align: center;
+    background-color: blue;
+    height: 200px;
+}
+.images>img{
+    border: 1px solid green;
+    width: 100px;
+    margin-top: 20px;
+}

@@ -39,37 +39,65 @@ window.onload = function(){
         });
     }
 
-    // const images = {
-    //     '0', '1', '2', '3', '4'
-    // }
-
-    function getImages(n) {
-        let image = new Image();
-        let arrayImage = [];
-        for(let i = 0; i <= n; i++){            
-            image.src = 'img/' + i + '.jfif';
-            arrayImage.push(image);
+    
+    // function getImages() {
+    //     let image = new Image;
+    //     let arrayImage = [];
+    //     for(let i = 0; i <= 7; i++){            
+    //         image.src = "img/" + i + ".jpg";
+    //         // console.log(image);
+    //         // console.log(i);
+    //         arrayImage.push(image);
             
-        }
-        return arrayImage;
-    }    
-    let arr = getImages(7);
-    console.log(arr);
-    function imageOutFunc (item) {
+    //     }
+    //     return arrayImage;
+    // }
+    const arrayImage = [
+        'img/0.jpg',
+        'img/1.jpg',
+        'img/2.jpg',
+        'img/3.jpg',
+        'img/4.jpg',
+        'img/5.jpg',
+        'img/6.jpg',
+        'img/7.jpg'
+    ]    
+    
+    // getImages();
+    
+    let counter = 0;
+    function imageOutFunc () {
         let divImage = document.querySelector('.images');
-        item.forEach(src => {
-            let img = document.createElement('img');
-            img.src = src;
-            divImage.append(img);
-        });
-         
-        // for (let key in item){
-        //     let img = document.createElement('img');
-        //     console.log(key);
-        //     console.log(item);
-        //     console.log(typeof item);
-        // }
-    }    
-    setInterval(imageOutFunc(arr),5000);
+        // let img = document.createElement('img');
+        let img = document.querySelector('img');
+        img.src = arrayImage[counter];        
+        console.log(arrayImage[counter]);
+        counter++;
+        if(counter === arrayImage.length){
+            counter = 0;
+        }
+        console.log(counter);
+        
+        // arrayImage.forEach(() => {
+        //     // let img = document.createElement('img');
+        //     let img = document.querySelector('img');
+        //     // console.log(src);
+        //     //img.src = src;
+            
+        //     for(let i = 0; i < arrayImage.length; i++){
+        //         let counter = 0;
+        //         img.src = arrayImage[i];
+        //         console.log(i);
+        //         console.log(arrayImage[i]);
+        //     }
+        //     // divImage.append(img);
+            
+            
+            
+        // });
+        
+    }   
+  
+    setInterval(imageOutFunc, 1000); 
     
 };
