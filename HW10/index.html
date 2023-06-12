@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home work 10</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/imask"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <section class="section-one">
+        <h1>Pizza market (Home work 10)</h1>
+        <form action="" class="main-form">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col choose-pizza">
+                <select class="form-select" aria-label="Default select example">
+                    <option value="none" selected>Open this select menu</option>
+                    <option value="margherita">Margherita</option>
+                    <option value="marinara">Marinara</option>
+                    <option value="carbonara">Carbonara</option>
+                  </select>
+              </div>
+              <div class="col pizza-info">
+                Column
+              </div>
+              <div class="col pizza-size">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="sizeM" value="sizeM">
+                    <label class="form-check-label" for="sizeM">
+                      M
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="sizeL" value="sizeL">
+                    <label class="form-check-label" for="sizeL">
+                      L
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="sizeXL" value="sizeXL">
+                    <label class="form-check-label" for="sizeXL">
+                      XL
+                    </label>
+                  </div>
+              </div>
+              <div class="col additives-block">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="onion" value="15">
+                    <label class="form-check-label" for="onion">
+                      Onion - 15
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cheese-board" value="40">
+                    <label class="form-check-label" for="cheese-board">
+                      cheese board - 40
+                    </label>
+                  </div>                  
+              </div>
+              <div class="col quantity-block">
+                <label for="quantity" class="form-label">Enter quantity of pizza</label>
+                <input type="number" class="form-control" id="quantity" value="1">                
+              </div>
+              <div class="col pizza-image">
+                <img src="" class="img-fluid" alt="">
+              </div>  
+            </div>
+          </div>
+          <div class="price-block">
+            <label for="pizzaPriceWithoutAdditives" class="form-label">Pizza price without additives</label>
+            <input type="text" class="form-control" id="pizzaPriceWithoutAdditives" value="" readonly>
+            <label for="pizzaPriceWithAdditives" class="form-label">Total price</label>
+            <input type="text" class="form-control" id="pizzaPriceWithAdditives" value="" readonly>
+          </div>
+          <div class="a-btn-pre-order">
+            <!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="check.html" role="button" onclick="return false">
+              Make an order
+            </a> -->
+            <button type="submit" class="btn btn-primary make-an-order">Make an order</button>
+          </div>
+        </form>        
+    </section>
+    <section class="section-two">
+      <form action="" class="form-check">
+          <div class="mb-3 name-form-div">
+              <label for="name-id-input" class="form-label">Enter your name</label>
+              <input type="text" class="form-control name-form-input" id="name-id-input" placeholder="Enter your name">
+              <div class="error-name"></div>
+          </div>
+          <div class="mb-3 phone-form-div">
+              <label for="phone-id-input" class="form-label">Enter your phone numer</label>
+              <input type="text" class="form-control phone-form-input" id="phone-id-input" placeholder="+38(000)000-00-00">
+          </div>
+          <div class="mb-3 email-form-div">
+              <label for="email-id-input" class="form-label">Email address</label>
+              <input type="email" class="form-control email-form-input" id="email-id-input" placeholder="name@example.com">
+              <div class="error-email"></div>
+              <!-- <input type="submit"> -->
+          </div>
+          <div class="container text-center">
+              <h3>you choosed</h3>
+              <div class="row">
+                  <div class="col name-pizza">
+                      <p class="name-pizza-p">Name of pizza - </p>
+                  </div>
+                  <div class="col price-pizza">
+                      <p class="price-pizza-p">Pizza price</p>
+                  </div>
+                  <div class="col price-additives-pizza">
+                      <p class="price-additives-pizza-p">Price of additives</p>
+                  </div>
+                  <div class="col quantity-pizza">
+                      <p class="quantity-pizza-p">Quantity</p>
+                  </div>
+                  <div class="col total-price-pizza">
+                      <p class="total-price-pizza-p">Total price without delivery</p>
+                  </div>
+                  <div class="col delivery-price-div">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="40" id="delivery-price-id">
+                          <label class="form-check-label" for="delivery-price-id">
+                            Delivery price is - 40
+                          </label>
+                        </div>
+                  </div>                    
+              </div>
+              <div class="total-price-final-div">
+                  <h3>Total price final</h3>
+                  <h4></h4>
+              </div>                
+          </div>
+          <div class="btn-final-order">            
+            <button type="submit" class="btn btn-primary make-final-order">Make an order</button>
+          </div>
+      </form>
+  </section>
+  <section class="section-three">
+    <div class="thank-you">
+      <h2>Thanks for your order</h2>      
+    </div>
+  </section>
+    
+  </body>
+</html>

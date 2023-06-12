@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    /* background-image: url(img/bgImg.jpg); */
+    background-repeat: no-repeat;    
+    background-size: 100%;
+    /* color: white; */    
+}
+.price-block{
+    width: 20%;
+}
+.a-btn-pre-order{
+    margin-top: 20px;
+}
+.form-check{
+    width: 80%;    
+}
+.invalid { 
+    border-color: red; 
+}
+.error-name, .error-email { 
+    color: red 
+}
+.section-two, .section-three{
+    display: none;
+}
+
