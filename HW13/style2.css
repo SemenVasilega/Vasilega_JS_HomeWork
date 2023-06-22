@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+/* section{
+    display: flex;
+    justify-content: center;
+} */
+.slider{
+    width: 90%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    
+}
+.imageDiv{
+    width: 30%;
+    height: 400px;
+    text-align: center;
+    margin-right: 1%;
+}
+/* .imageDiv{
+    width: 100px;
+    height: 100px;
+} */
+img{
+    width: 100%;
+    height: 100%;    
+}
+.slick-prev{
+    content: '';
+}
+/* .slick-prev::before{
+    content: ' ←';
+} */
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color: blue;
+    margin-bottom: 2%;
+}

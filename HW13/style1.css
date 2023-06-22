@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+.row{
+    margin-bottom: 2%;
+}
+#svgSection{
+    margin: 0 auto;    
+    border: 1px solid black;
+    width: 1200px;
+    height: 600px;
+}
