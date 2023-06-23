@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    height: 400px;
+    margin: 30px auto;
+    display: flex;
+
+}
+.slider-line>img{
+    width: 100%;
+    height: auto;
+}
+.slider {    
+    border: 2px solid black;
+    /* width: 100%; */
+    max-width: 60%;
+    /* height: 300px; */
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-line {
+    width: 1024px;
+    display: flex;    
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
